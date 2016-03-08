@@ -2,7 +2,7 @@ define [
   'underscore'
   'jquery'
   'backbone'
-], (_, $, Backbone, lifecycleEvents) ->
+], (_, $, Backbone) ->
   # This class provides a reliable application lifecycle eventing system. In an event-based
   # system the listener has to bind before the event is triggered. In a promise-based
   # system the promise needs to be created before its requested.  This class solves
