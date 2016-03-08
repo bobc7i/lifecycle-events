@@ -2,7 +2,7 @@ define [
   'jquery'
   '../js/lifecycle'
 ], ($, lifecycle) ->
-  describe 'Editor Lifecycle', ->
+  describe 'Application Lifecycle', ->
     beforeEach ->
       @EVENT_A = 'event-a'
       @EVENT_B = 'event-b'
