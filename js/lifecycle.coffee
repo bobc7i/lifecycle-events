@@ -59,7 +59,7 @@ define [
       $.when.apply this, promises
 
     constructor: ->
-      @suppressLifecycleEvents = Galileo.suppressLifecycleEvents # testing hook
+      @suppressLifecycleEvents = false
       @_init()
 
   new Lifecycle()
