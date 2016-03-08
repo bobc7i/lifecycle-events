@@ -3,7 +3,7 @@ define [
   'jquery'
   'backbone'
 ], (_, $, Backbone, lifecycleEvents) ->
-  # This class provides a reliable editor lifecycle eventing system. In an event-based
+  # This class provides a reliable application lifecycle eventing system. In an event-based
   # system the listener has to bind before the event is triggered. In a promise-based
   # system the promise needs to be created before its requested.  This class solves
   # both cases by allowing clients to wait for a event that may have already occurred
@@ -21,7 +21,7 @@ define [
   #   When listening to events you can listen to a single or multiple events
   #     lifecycle.when('event-a').then ->
   #     lifecycle.when('event-b', 'event-c', 'event-d').then (b, c) ->
-  class EditorLifecycle
+  class Lifecycle
     _init: ->
       @promises = {}
       @events = _.extend {}, Backbone.Events
@@ -62,4 +62,4 @@ define [
       @suppressLifecycleEvents = Galileo.suppressLifecycleEvents # testing hook
       @_init()
 
-  new EditorLifecycle()
+  new Lifecycle()
